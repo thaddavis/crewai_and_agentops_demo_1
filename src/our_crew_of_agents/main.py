@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
 from src.our_crew_of_agents.crew import OurCrewOfAgents
-
 import os
 import agentops
 
