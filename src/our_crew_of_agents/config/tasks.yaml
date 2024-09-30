@@ -1,0 +1,13 @@
+write_declaration:
+    description: >
+      Write the Declaration of Independence for the United States during the Revolutionary War.
+    expected_output: >
+      The Declaration of Independence that will be sent to the British government.
+    agent: thomas_jefferson
+
+military_strategy:
+    description: >
+      Generate a military strategy to defeat the British Army.
+    expected_output: >
+      A detailed military strategy that will lead the U.S. to victory
+    agent: george_washington

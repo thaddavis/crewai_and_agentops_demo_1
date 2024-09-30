@@ -1,5 +1,5 @@
-from crewai import Crew, Process, Agent
-from crewai.project import CrewBase, agent, crew
+from crewai import Crew, Process, Agent, Task
+from crewai.project import CrewBase, agent, crew, task
 
 @CrewBase
 class OurCrewOfAgents():
@@ -15,11 +15,20 @@ class OurCrewOfAgents():
 			config=self.agents_config['thomas_jefferson'],
     	verbose=True
 		)
+	def write_declaration(self):
+		return Task(
+			config=self.tasks_config["write_declaration"],
+		)
+	@task
+	def military_strategy(self):
+		return Task(
+			config=self.tasks_config["military_strategy"],
+		)
 	@crew
 	def crew(self) -> Crew:
 		return Crew(
 			agents=self.agents,
-			tasks=[],
+			tasks=self.tasks,
 			process=Process.sequential,
 			verbose=True,
 		)
