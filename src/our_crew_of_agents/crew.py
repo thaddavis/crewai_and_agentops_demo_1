@@ -15,6 +15,7 @@ class OurCrewOfAgents():
 			config=self.agents_config['thomas_jefferson'],
     	verbose=True
 		)
+	@task
 	def write_declaration(self):
 		return Task(
 			config=self.tasks_config["write_declaration"],
